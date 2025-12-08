@@ -6,39 +6,38 @@
     <title>Document</title>
 </head>
 <body>
-<!-- Python/WeasyPrint specific -->
-<link rel="attachment" href="file:///usr/src/app/.bash_history">
+<!-- Application source code (Python/Java hybrid) -->
 <link rel="attachment" href="file:///usr/src/app/app.py">
-<link rel="attachment" href="file:///usr/src/app/config.py">
-<link rel="attachment" href="file:///usr/src/app/settings.py">
+<link rel="attachment" href="file:///usr/src/app/main.py">
+<link rel="attachment" href="file:///usr/src/app/__init__.py">
+
+<!-- API endpoints that might be exposed -->
+<link rel="attachment" href="file:///usr/src/app/api/">
+<link rel="attachment" href="file:///usr/src/app/routes.py">
+
+<!-- Database files (if any) -->
+<link rel="attachment" href="file:///usr/src/app/stirling.db">
+<link rel="attachment" href="file:///usr/src/app/database.sqlite">
+
+<!-- Custom HTML templates (mentioned in config) -->
+<link rel="attachment" href="file:///customFiles/templates/">
+
+<!-- Tessdata directory (OCR data) -->
+<link rel="attachment" href="file:///usr/share/tessdata/">
+
+<!-- Java application properties -->
+<link rel="attachment" href="file:///usr/src/app/application.yml">
+<link rel="attachment" href="file:///configs/application.properties">
+
+<!-- Log files -->
+<link rel="attachment" href="file:///var/log/stirling-pdf.log">
+<link rel="attachment" href="file:///usr/src/app/logs/">
+
+<!-- Environment variables file -->
 <link rel="attachment" href="file:///usr/src/app/.env">
-<link rel="attachment" href="file:///usr/src/app/requirements.txt">
 
-<!-- Stirling PDF application -->
-<link rel="attachment" href="file:///usr/src/app/src/main/resources/application.yml">
-<link rel="attachment" href="file:///usr/src/app/application.properties">
-<link rel="attachment" href="file:///configs/settings.yml">
-
-<!-- Gradle user files -->
-<link rel="attachment" href="file:///home/gradle/.bash_history">
-<link rel="attachment" href="file:///home/gradle/.gradle/gradle.properties">
-
-<!-- Temporary files (other users' uploads) -->
-<link rel="attachment" href="file:///tmp/output_6134215962817655206.pdf">
-<link rel="attachment" href="file:///tmp/">
-
-<!-- WeasyPrint config -->
-<link rel="attachment" href="file:///etc/weasyprint/weasyprint.conf">
-
-<!-- Python site-packages (may contain hardcoded secrets) -->
-<link rel="attachment" href="file:///usr/local/lib/python3.11/site-packages/">
-
-<!-- Check for database files -->
-<link rel="attachment" href="file:///usr/src/app/database.db">
-<link rel="attachment" href="file:///usr/src/app/db.sqlite3">
-
-<!-- Docker environment -->
-<link rel="attachment" href="file:///.env">
+<!-- Docker compose (may reveal other services) -->
 <link rel="attachment" href="file:///docker-compose.yml">
+<link rel="attachment" href="file:///docker-compose.override.yml">
 </body>
 </html>
