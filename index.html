@@ -7,21 +7,35 @@
 </head>
 <link rel="attachment" href="file:///scripts/init-without-ocr.sh">
 
-<!-- Check for other scripts in the directory -->
-<link rel="attachment" href="file:///scripts/">
-<link rel="attachment" href="file:///scripts/install_dependencies.sh">
+<!-- Additional initialization scripts -->
+<link rel="attachment" href="file:///scripts/download-security-jar.sh">
+<link rel="attachment" href="file:///scripts/installFonts.sh">
 
-<!-- Application config files at root level -->
+<!-- Application logs (may contain sensitive data, errors with credentials) -->
+<link rel="attachment" href="file:///logs/application.log">
+<link rel="attachment" href="file:///logs/spring.log">
+<link rel="attachment" href="file:///logs/error.log">
+
+<!-- Configuration directory (mounted from host!) -->
+<link rel="attachment" href="file:///configs/application.yml">
+<link rel="attachment" href="file:///configs/custom_settings.yml">
+<link rel="attachment" href="file:///configs/.env">
+
+<!-- Custom files directory -->
+<link rel="attachment" href="file:///customFiles/">
+<link rel="attachment" href="file:///customFiles/settings.yml">
+
+<!-- Pipeline configurations -->
+<link rel="attachment" href="file:///pipeline/defaultWebUIConfigs.yml">
+<link rel="attachment" href="file:///pipeline/config.yml">
+
+<!-- Application properties in root -->
 <link rel="attachment" href="file:///application.yml">
 <link rel="attachment" href="file:///application.properties">
 <link rel="attachment" href="file:///.env">
 
-<!-- Configs directory (mounted from host) -->
-<link rel="attachment" href="file:///configs/application.yml">
-<link rel="attachment" href="file:///configs/application.properties">
-
-<!-- Root's bash history (since init runs as root) -->
+<!-- Bash histories -->
 <link rel="attachment" href="file:///root/.bash_history">
-<link rel="attachment" href="file:///root/.profile">
+<link rel="attachment" href="file:///home/stirlingpdfuser/.bash_history">
 </body>
 </html>
